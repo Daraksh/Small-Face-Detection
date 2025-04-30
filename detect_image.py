@@ -1,8 +1,3 @@
-"""
-Script to evaluate model.
-Look at Makefile to see `evaluate` command.
-"""
-
 import argparse
 import json
 
