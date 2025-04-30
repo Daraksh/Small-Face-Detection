@@ -1,6 +1,4 @@
 import numpy as np
-
-
 def get_bboxes(score_cls,
                score_reg,
                prob_cls,
@@ -9,9 +7,7 @@ def get_bboxes(score_cls,
                rf,
                scale=1,
                refine=True):
-    """
-    Convert model output tensor to a set of bounding boxes and their corresponding scores
-    """
+    
     num_templates = templates.shape[0]
 
     # template to evaluate at every scale (Type A templates)
@@ -101,13 +97,6 @@ def regression_refinement(tx, ty, tw, th, cx, cy, cw, ch, indices):
 
 
 def balance_sampling(label_cls, pos_fraction, sample_size=256):
-    """
-    Perform balance sampling by always sampling `pos_fraction` positive samples and
-    `(1-pos_fraction)` negative samples from the input
-    :param label_cls: Class labels as numpy.array.
-    :param pos_fraction: The maximum fraction of positive samples to keep.
-    :return:
-    """
     pos_maxnum = sample_size * pos_fraction  # sample 128 positive points
 
     # Find all the points where we have objects and ravel the indices to get a 1D array.
@@ -140,12 +129,6 @@ def balance_sampling(label_cls, pos_fraction, sample_size=256):
 
 
 def shuffle_index(n, n_out):
-    """
-    Randomly shuffle the indices and return a subset of them
-    :param n: The number of indices to shuffle.
-    :param n_out: The number of output indices.
-    :return:
-    """
     n = int(n)
     n_out = int(n_out)
 
