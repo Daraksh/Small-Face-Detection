@@ -5,9 +5,6 @@ from torchvision.models import ResNet101_Weights, resnet101
 
 
 class DetectionModel(nn.Module):
-    """
-    Hybrid Model from Tiny Faces paper
-    """
 
     def __init__(self,
                  base_model=resnet101,
