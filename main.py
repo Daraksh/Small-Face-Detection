@@ -1,7 +1,3 @@
-"""
-Main model training training script.
-See Makefile `main` to see usage.
-"""
 import argparse
 from pathlib import Path
 
