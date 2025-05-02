@@ -1,8 +1,6 @@
 # Small-Face-Detection
 ## Getting Started
 
-- Install dependencies with `pip install -r requirements.txt`.
-
 ## Data
 - data should follow WIDERFace database directory for training
 
